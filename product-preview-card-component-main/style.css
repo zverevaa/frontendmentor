@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    height: 100vh;
+    background-color: #F2EAE2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #FFF;
+    border-radius: 10px;
+    height: 450px;
+    width: 600px;
+    display: flex;
+
+}
+
+.card .desktop {
+    min-width: 50%;
+    border-radius: 10px 0 0 10px
+}
+
+.card .mobile {
+    display: none;
+}
+
+.text {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text .type {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: rgb(108, 114, 137);
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.text h1 {
+    font-family: "Fraunces", sans-serif;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.text .description {
+    font-weight: 500;
+    line-height: 23px;
+    font-size: 14px;
+    color: rgb(108, 114, 137);
+}
+
+.text .prices {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    margin: 25px 0;
+}
+
+.text .price {
+    font-family: "Fraunces", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: rgb(61, 129, 104);
+}
+
+.text .prev-price {
+    font-size: 13px;
+    color: rgb(108, 114, 137);
+    text-decoration: line-through;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: rgb(61, 129, 104);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(26, 64, 50);
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 8px;
+        justify-content: start;
+    }
+    .card {
+        flex-direction: column;
+        align-items: center;
+        width: 343px;
+        height: auto;
+    }
+    
+    .card .desktop {
+        display: none;
+
+    }
+
+    .card .mobile {
+        display: block;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .text {
+        padding: 24px;
+    }
+
+    .text .type {
+        margin-bottom: 12px;
+    }
+
+    .text h1 {
+        margin-bottom: 16px;
+    }
+
+
+    .text .prices {
+        margin-top: 20px;
+        margin-bottom: 16px;
+    }
+}
+
+
