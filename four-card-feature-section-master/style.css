@@ -18,6 +18,7 @@ body {
     justify-content: center;
     height: 100vh;
     row-gap: 64px;
+    padding: 32px;
     background: rgb(242, 242, 242);
 }
 
@@ -56,25 +57,29 @@ body {
     display: flex;
     align-items: center;
     gap: 30px;
+    max-width: 1110px;
+
 }
 
 .cards--grouped {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    flex-basis: calc((100% - 2 * 30px) / 3)
 }
 
 .card {
     padding: 32px;
     border-radius: 8px;
     box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
-    height: 250px;
-    width: 350px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    flex: 1;
+    flex-basis: 250px;
+    height: 250px;
 }
 
 .card--cyan::before,
@@ -123,4 +128,32 @@ body {
     height: 64px;
     align-self: flex-end;
     margin-top: auto;
+}
+
+/* MOBILE */
+
+@media (max-width:1080px) or (max-height: 900px) {
+    body {
+        height: initial;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 560px) {
+    body {
+        padding: 85px 32px;
+    }
+
+    .info__title {
+        font-size: 24px;
+        letter-spacing: 0.17px;
+        line-height: 36px;
+    }
 }
