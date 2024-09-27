@@ -17,9 +17,17 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    row-gap: 64px;
     padding: 32px;
     background: rgb(242, 242, 242);
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 64px;
+    max-width: 1110px;
 }
 
 /* INFO */
@@ -57,7 +65,6 @@ body {
     display: flex;
     align-items: center;
     gap: 30px;
-    max-width: 1110px;
 
 }
 
@@ -132,8 +139,12 @@ body {
 
 /* MOBILE */
 
-@media screen and (max-width:1080px) or (max-height: 900px) {
+@media (max-width:1080px) or (max-height: 900px) {
     body {
+        height: initial;
+    }
+
+    .app-container {
         height: initial;
     }
 
@@ -146,7 +157,7 @@ body {
     }
 }
 
-@media screen and (max-width: 560px) {
+@media (max-width: 560px) {
     body {
         padding: 85px 32px;
     }
