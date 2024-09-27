@@ -132,7 +132,7 @@ body {
 
 /* MOBILE */
 
-@media (max-width:1080px) or (max-height: 900px) {
+@media screen and (max-width:1080px) or (max-height: 900px) {
     body {
         height: initial;
     }
@@ -146,7 +146,7 @@ body {
     }
 }
 
-@media (max-width: 560px) {
+@media screen and (max-width: 560px) {
     body {
         padding: 85px 32px;
     }
